@@ -1,0 +1,123 @@
+<!--Ebony Brown, Witcher 3 Ability Screen
+Released: 2020/06/25,
+Credit:
+  1.Project structure "CodingJourney-https://www.youtube.com/watch?v=F4TfBopAmaY&t=1240s"
+  2. W3schools for the popUp forms
+  3. Stephanie Valenzuela, Kenal Ortega, Narissa Hajratalli, and Kenya Cobbs for debugging assistance!
+Blog documentation
+  part 1:https://ebsataglance.wordpress.com/2020/06/25/final-project-documentation-part-1-html-cssposted-a-day-late/
+  part 2:https://ebsataglance.wordpress.com/2020/06/26/final-project-documentation-part-2-javascript-and-remaining-html-and-css/
+-->
+
+<DOCTYPE html>
+    <head> 
+      <link rel="stylesheet" href="style.css">
+        <title>Mutagen Game</title>  
+      </head>
+      <body>
+       <!--Sidebar items-->
+        <div class="sidebar">
+          <ul class="currencies">
+            <li class="mutagens"><img src="assets/lesser_red.png" class="mutagen"><span><input class ="side_input" id="a"></span></li>
+            <li class="mutagens"><img src ="assets/lesser_blue.png" class="mutagen"><span><input class ="side_input" id="b"></span></li>
+            <li class="mutagens"><img src = "assets/lesser_green.png" class="mutagen"><span><input class ="side_input" id="c"></span></li>
+            <li class="mutagens"><img src ="assets/red.png"  class="mutagen"><span><input class ="side_input" id="d"></span></li>
+            <li class="mutagens"><img src ="assets/blue.png"  class="mutagen"><span><input class ="side_input" id="e"></span></li>
+            <li class="mutagens"><img src ="assets/green.png"  class="mutagen"><span><input class ="side_input" id="f"></span></li>
+            <li class="mutagens"><img src ="assets/greater_red.png" class="mutagen"lass="mutagen"><span><input class ="side_input" id="g"></span></li>
+            <li class="mutagens"><img src ="assets/greater_blue.png" class="mutagen"><span><input class ="side_input" id="h"></span></li>
+            <li `><img src ="assets/greater_green.png" class="mutagen"><span><input class ="side_input" id="i"></span></li>
+          </ul>
+        </div>
+        <!--Main content items-->
+        <div class="main" id="main">
+          <span id="return">></span>
+           
+          <button onclick="mutagenSelector()">Get Started</button>
+        </div>          
+        
+        <!--W3 schools popform 1-->
+        <div class="form-popup2" id="lesser">
+          <form class="form-container">
+            <h2>Lesser => Standard</h2>
+        
+            <label>L.Red</label>
+              <input type="number" placeholder="0" class="form_input" id="0">
+            <label><b>S.Red</label>
+              <input type="number" class="form_input" id ="1">
+            <label>L.Blue</label>
+              <input type="number" placeholder="0" class="form_input" id = "2" >
+            <label>S.Blue</label>
+              <input type="number" class="form_input" id="3">
+            <label><b>L.Green</label>
+              <input type="number" placeholder="Enter Password" class="form_input" id ="4">
+            <label>S.Green</label>
+              <input type="number" placeholder="Enter Password" class="form_input" id="5">
+            <button type="submit" class="btn" onclick="less()">exchange</button>
+            <button type="submit" class="btn cancel" onclick="hideForm(0)">Close</button>
+          </form>
+
+        </div>
+          <!--W3 schools popform 1 end-->
+          <!--W3 schools popform 2-->
+        <div class="form-popup3" id="standard">
+          <form class="form-container">
+            <h2>Standard => Greater</h2>
+        
+            <label>S.Red</label>
+              <input type="number" placeholder="0" class="form_input" id="6">
+            <label><b>G.Red</label>
+              <input type="number" class="form_input" id ="7">
+            <label>S.Blue</label>
+              <input type="number" placeholder="0" class="form_input" id = "9">
+            <label>G.Blue</label>
+              <input type="number" class="form_input" id="10">
+            <label><b>S.Green</label>
+              <input type="number" placeholder="Enter Password" class="form_input" id ="11">
+            <label>G.Green</label>
+              <input type="number" placeholder="Enter Password" class="form_input" id="12">
+            <button type="submit" class="btn" onclick= "stan()">exchange</button>
+            <button type="submit" class="btn cancel" onclick="hideForm(1)">Close</button>
+          </form>
+
+        </div>
+          <!--W3 schools popform 2 end-->
+           <!--W3 schools popform 3-->
+        <div class="form-popup" id="greater">
+          <form class="form-container">
+            <h2>Greater => Lesser</h2>
+        
+            <label>S.Red</label>
+              <input type="number" placeholder="0" class="form_input" id="13">
+            <label><b>G.Red</label>
+              <input type="number" class="form_input" id ="14">
+            <label>S.Blue</label>
+              <input type="number" placeholder="0" class="form_input" id = "15">
+            <label>G.Blue</label>
+              <input type="number" class="form_input" id="16">
+            <label><b>S.Green</label>
+              <input type="number" placeholder="Enter Password" class="form_input" id ="17">
+            <label>G.Green</label>
+              <input type="number" placeholder="Enter Password" class="form_input" id="18">
+            <button type="submit" class="btn" onclick= "stan()">exchange</button>
+            <button type="submit" class="btn cancel" onclick="hideForm(2)">Close</button>
+          </form>
+
+        </div>
+          <!--W3 schools popform 3 end-->
+        <div class="info">
+          <button type ="button" class="transfer" onclick="start()">Would you like to exchange?</button>
+          <button type ="button" class="replace" id ="ls" onclick="revealForm(1)">Lesser to Standard</button> 
+          
+          <button type ="button" class="replace" id ="sg" onclick="revealForm(2)">Standard to Greater</button>
+           <!--W3 schools popform 2-->
+          <button type="button" class="replace" id ="gs" onclick="revealForm(3)">Greater to Standard</button>
+           <!--W3 schools popform 3-->
+        </div>
+        
+        
+        
+    
+        <script src ="function.js"></script>
+        <script src ="temp.js"></script>
+      </body>
